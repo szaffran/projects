@@ -269,7 +269,8 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <state key="normal" title="Save"/>
                                                     <connections>
-                                                        <segue destination="8zb-fi-gez" kind="unwind" identifier="UnwindToBookTable" unwindAction="prepareForUnwindWithSegue:" id="LdP-cM-FTn"/>
+                                                        <action selector="saveButtonTapped:" destination="cS2-yO-eby" eventType="touchUpInside" id="j4F-nC-UOt"/>
+                                                        <segue destination="8zb-fi-gez" kind="unwind" identifier="UnwindToBookTable" unwindAction="prepareForUnwindWithSegue:" id="7gT-2z-y10"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
