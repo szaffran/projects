@@ -11,6 +11,11 @@ import UIKit
 class SecondViewController: UIViewController
 {
     
+    enum OutletError : Error {
+        case isNil
+        case ok
+    }
+    
     @IBOutlet weak var lblMessage: UILabel!
     var message : String?
     
@@ -33,20 +38,49 @@ class SecondViewController: UIViewController
         NotificationCenter.default.addObserver(self, selector : #selector(messageReceived(_:)), name: NSNotification.Name(rawValue: "MessageToViewController2"), object: nil)
     }
 
-    @objc func messageReceived(_ notification: NSNotification)
+    @objc func messageReceived(_ notificiation: NSNotification)
     {
-        let txtMessage : String = notification.object as! String
+        let txtMessage : String = notificiation.object as! String
+        
         print(txtMessage)
         
-        if(self.lblMessage != nil){
+        //        if( self.lblMessage != nil )
+        //        {
+        //            self.lblMessage.text = txtMessage
+        //        }
+        //        else
+        //        {
+        //            self.message = txtMessage
+        //        }
+        
+        do
+        {
+            try self.checkOutlet(outlet: self.lblMessage)
             self.lblMessage.text = txtMessage
         }
-        else{
+        catch OutletError.isNil
+        {
             self.message = txtMessage
         }
-        
-        
+        catch _ as Error
+        {
+            // nothing here
+        }
     }
+    
+    func checkOutlet( outlet : UIView? ) throws
+    {
+        if outlet == nil
+        {
+            throw OutletError.isNil
+        }
+        else
+        {
+           
+        }
+    }
+        
+   
     /*
     // MARK: - Navigation
 
