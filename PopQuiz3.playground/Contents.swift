@@ -4,7 +4,7 @@ import UIKit
 
 /* How can two objects communicate with each other? */
 
-    //using segue or nsnotification
+    //using segue or nsnotification  --- Delegate
 
 /*:
  Create a protocol called `Vehicle` with two requirements: a nonsettable `numberOfWheels` property of type `Int`, and a function called `drive()`.
@@ -33,24 +33,21 @@ struct Car :Vehicle {
 }
 
 
-
-
-
 /* Describe the MVC design pattern and how it's used */
 
         //model view controller, 3 differents layers,in model we define the classes of type pesistance, in conntroller class with action function (often static) and the view is the main.storyboard
 
 /* Describe the Singleton and how it's used */
 
-        // the singleton is a class with a type of himself static inside, every time we call him it chek if it still exist, then if not exist, it been created, else, we just past the old one to be use
+        // the singleton is a class with a type of himself static inside, every time we call him it check if it still exist, then if not exist, it been created, else, we just past the old one to be use
 
 /* Name a few ways to save data */
 
-        //database, file, userDefault
+        //database, file, userDefault   -----  NSCoder, plist
 
 /* Implement the NSCoding protocol on Car */
 
-class myCar :Vehicle, NSCoding {
+class myCar :NSObject, Vehicle, NSCoding {
    
     
     var  numberOfWheels: Int {
@@ -60,23 +57,23 @@ class myCar :Vehicle, NSCoding {
     }
     
     func encode(with aCoder: NSCoder) {
-        <#code#>
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
-        <#code#>
+        
     }
 }
 
 /* What class does a tableview inherit from? */
 
-  //UITableViewController
+  //UITableViewController  --- UIScrollView
 
 /* What are some advantages and disadvantages of using a xib file over a storyboard? */
 
         // advantage of xib :  we separate the flow of the program from the views, so easier to maintain the code, for change a view, we just create a new view and when is finished, we link it in place of the old one, it's easier to work many peaple together, each one on it view and then just have to link the view on the flow
 
-        //advantage on no xib : easier to work in graphic for little projects
+        //disadvantage of xib : don't have segue
 
 
 /* What are the advantages and disadvantages of notifications over delegates? */

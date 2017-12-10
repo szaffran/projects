@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BDl-Nv-K2J">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="enl-Hv-Fil">
+            <objects>
+                <tabBarController id="BDl-Nv-K2J" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nTU-wU-E3s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="PrU-Gz-ERD" kind="relationship" relationship="viewControllers" id="X6J-6r-00h"/>
+                        <segue destination="d3c-A7-1qC" kind="relationship" relationship="viewControllers" id="uAs-s5-b1f"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hZs-hQ-Ubu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="369" y="-296"/>
+        </scene>
+        <!--Who Am I-->
+        <scene sceneID="pP8-Kb-HaB">
+            <objects>
+                <viewController id="d3c-A7-1qC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NVb-eB-Sc4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="here i am thanks for visiting my page" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Qc-ih-XUw">
+                                <rect key="frame" x="16" y="20" width="343" height="540"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DZT-uy-NBt"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Who Am I" id="51a-ia-ajh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zvr-4F-pSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="-296.40179910044981"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZDh-6W-xzY">
+            <objects>
+                <viewController id="5pE-hi-ObO" customClass="ViewController" customModule="CvApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BPV-XN-mFw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brad pit" translatesAutoresizingMaskIntoConstraints="NO" id="O0K-nG-RaP">
+                                <rect key="frame" x="115" y="95" width="145" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIN-5J-BZd">
+                                <rect key="frame" x="232" y="396" width="127" height="148"/>
+                                <state key="normal" title="formation" image="degres"/>
+                                <connections>
+                                    <action selector="goToFormation:" destination="5pE-hi-ObO" eventType="touchUpInside" id="jun-Zg-pWt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="welcome to my home page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaw-KU-yls">
+                                <rect key="frame" x="64" y="263" width="247" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYy-Nc-un8">
+                                <rect key="frame" x="16" y="396" width="149" height="148"/>
+                                <state key="normal" title="experience" image="experience"/>
+                                <connections>
+                                    <action selector="goToExperience:" destination="5pE-hi-ObO" eventType="touchUpInside" id="26p-ue-QEe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QeN-RP-P9S" firstAttribute="bottom" secondItem="IIN-5J-BZd" secondAttribute="bottom" constant="74" id="RJb-0b-W0D"/>
+                            <constraint firstItem="yYy-Nc-un8" firstAttribute="leading" secondItem="QeN-RP-P9S" secondAttribute="leading" constant="16" id="U6y-qr-QaG"/>
+                            <constraint firstItem="QeN-RP-P9S" firstAttribute="trailing" secondItem="IIN-5J-BZd" secondAttribute="trailing" constant="16" id="WjL-Js-X2F"/>
+                            <constraint firstItem="QeN-RP-P9S" firstAttribute="bottom" secondItem="yYy-Nc-un8" secondAttribute="bottom" constant="74" id="a9C-Pw-EgD"/>
+                            <constraint firstItem="IIN-5J-BZd" firstAttribute="leading" secondItem="yYy-Nc-un8" secondAttribute="trailing" constant="74" id="tcD-Jz-1NH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QeN-RP-P9S"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9yK-T8-B24"/>
+                    <connections>
+                        <segue destination="uHR-Py-vNa" kind="show" identifier="SegueFormation" id="djI-oS-7d4"/>
+                        <segue destination="S5N-KS-jRr" kind="show" identifier="SegueExperience" id="BAZ-6e-Au0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzP-eO-luH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="232.80000000000001" y="606.74662668665667"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xOP-so-hG3">
+            <objects>
+                <viewController id="uHR-Py-vNa" customClass="ViewController" customModule="CvApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jvj-Ia-eO2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="this is my cv " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nEE-QD-BJh">
+                                <rect key="frame" x="71" y="73" width="270" height="450"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fpj-pV-A5P">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="My CV" id="Qys-Fm-ei2">
+                                        <barButtonItem key="backBarButtonItem" title="go to Home" id="bbb-Kg-y9H"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="h5s-T2-h5O"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqJ-07-rRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108" y="627"/>
+        </scene>
+        <!--Home Page-->
+        <scene sceneID="C13-Tz-qr5">
+            <objects>
+                <navigationController id="PrU-Gz-ERD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home Page" id="kko-0Y-LzB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="caq-hN-XJL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5pE-hi-ObO" kind="relationship" relationship="rootViewController" id="pE1-mS-t9M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6bq-iL-GRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-658" y="601"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YIi-HN-7O2">
+            <objects>
+                <viewController id="S5N-KS-jRr" customClass="ViewController" customModule="CvApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6lZ-Ry-RYJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GWD-6h-gIK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Experience" id="HdE-Bc-XbS">
+                                        <barButtonItem key="backBarButtonItem" title="go to home" id="AUX-nu-3YV"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2ow-mq-7Go"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cig-ey-kyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108" y="1431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="brad pit" width="930" height="933"/>
+        <image name="degres" width="225" height="225"/>
+        <image name="experience" width="225" height="225"/>
+    </resources>
+</document>

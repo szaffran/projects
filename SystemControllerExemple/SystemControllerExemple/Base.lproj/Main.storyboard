@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="4112" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SystemControllerExemple" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dDR-Xy-4pz"/>
+                        <viewControllerLayoutGuide type="bottom" id="iun-N1-H8Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TKS-DI-tTA">
+                                <rect key="frame" x="67" y="80" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5r-yl-8Wk">
+                                <rect key="frame" x="35" y="318" width="79" height="30"/>
+                                <state key="normal" title="take photo"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KOI-1q-PFK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80u-Vy-E5X">
+                                <rect key="frame" x="277" y="318" width="62" height="30"/>
+                                <state key="normal" title="get photo"/>
+                                <connections>
+                                    <action selector="getPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hfb-oN-kWd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbr-7C-cVJ">
+                                <rect key="frame" x="148" y="438" width="67" height="30"/>
+                                <state key="normal" title="Btn Share"/>
+                                <connections>
+                                    <action selector="shareImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aJI-eI-gRx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zov-y2-NZe">
+                                <rect key="frame" x="145" y="513" width="84" height="30"/>
+                                <state key="normal" title="btn Email"/>
+                                <connections>
+                                    <action selector="email:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WHj-WF-Gte"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iun-N1-H8Q" firstAttribute="top" secondItem="w5r-yl-8Wk" secondAttribute="bottom" constant="319" id="3MH-xZ-xHv"/>
+                            <constraint firstItem="cYq-FX-UV2" firstAttribute="trailing" secondItem="Zov-y2-NZe" secondAttribute="trailing" constant="146" id="6uB-M7-UuA"/>
+                            <constraint firstItem="80u-Vy-E5X" firstAttribute="leading" secondItem="w5r-yl-8Wk" secondAttribute="trailing" constant="163" id="DJc-fs-I51"/>
+                            <constraint firstItem="TKS-DI-tTA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="67" id="Dgg-Cs-8An"/>
+                            <constraint firstItem="cYq-FX-UV2" firstAttribute="bottom" secondItem="Zov-y2-NZe" secondAttribute="bottom" constant="124" id="ETG-0x-pY1"/>
+                            <constraint firstAttribute="trailing" secondItem="80u-Vy-E5X" secondAttribute="trailing" constant="36" id="FJZ-sS-eKb"/>
+                            <constraint firstItem="w5r-yl-8Wk" firstAttribute="top" secondItem="TKS-DI-tTA" secondAttribute="bottom" constant="110" id="LFm-xh-ROc"/>
+                            <constraint firstItem="80u-Vy-E5X" firstAttribute="leading" secondItem="zbr-7C-cVJ" secondAttribute="trailing" constant="62" id="Ldx-AW-SqJ"/>
+                            <constraint firstItem="cYq-FX-UV2" firstAttribute="trailing" secondItem="zbr-7C-cVJ" secondAttribute="trailing" constant="160" id="Nee-U3-pRg"/>
+                            <constraint firstItem="zbr-7C-cVJ" firstAttribute="leading" secondItem="cYq-FX-UV2" secondAttribute="leading" constant="148" id="O1n-wb-zfk"/>
+                            <constraint firstItem="iun-N1-H8Q" firstAttribute="top" secondItem="80u-Vy-E5X" secondAttribute="bottom" constant="319" id="PmQ-Lx-7J8"/>
+                            <constraint firstItem="Zov-y2-NZe" firstAttribute="top" secondItem="zbr-7C-cVJ" secondAttribute="bottom" constant="45" id="U2D-Pl-8aQ"/>
+                            <constraint firstItem="80u-Vy-E5X" firstAttribute="top" secondItem="TKS-DI-tTA" secondAttribute="bottom" constant="110" id="WEc-Qx-HcV"/>
+                            <constraint firstItem="TKS-DI-tTA" firstAttribute="top" secondItem="dDR-Xy-4pz" secondAttribute="bottom" constant="60" id="lAk-c0-Dqr"/>
+                            <constraint firstAttribute="trailing" secondItem="TKS-DI-tTA" secondAttribute="trailing" constant="68" id="nAf-L7-F7W"/>
+                            <constraint firstItem="Zov-y2-NZe" firstAttribute="leading" secondItem="cYq-FX-UV2" secondAttribute="leading" constant="145" id="y5i-JC-Y35"/>
+                            <constraint firstItem="w5r-yl-8Wk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="35" id="zzK-dc-uRg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cYq-FX-UV2"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="TKS-DI-tTA" id="UfQ-dM-DVR"/>
+                        <outlet property="shareButton" destination="zbr-7C-cVJ" id="Xsn-Xd-9Z5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>

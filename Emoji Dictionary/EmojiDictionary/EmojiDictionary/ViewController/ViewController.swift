@@ -84,11 +84,15 @@ class ViewController: BaseViewController, UITableViewDelegate,UITableViewDataSou
         self.performSegue(withIdentifier: "addEmojiSegue", sender: nil)
     }
     
+    
+    //
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return self.emojis!.count
         
     }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
@@ -110,12 +114,15 @@ class ViewController: BaseViewController, UITableViewDelegate,UITableViewDataSou
         return cell
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let emoji : Emoji = self.emojis![indexPath.row]
         
         self.performSegue(withIdentifier: "editEmojiSegue", sender: emoji)
     }
+    
+    
     
     func addEmoji(emoji: Emoji)
     {
